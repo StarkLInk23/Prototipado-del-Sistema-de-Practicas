@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+/*
+  Sistema de tokens — SIGEP
+  Paleta inspirada en la región de Madre de Dios (Amazonía peruana):
+  verde río/bosque como color institucional, oro de cosecha como acento
+  de foco, y un rojo tierra para las alertas de límite legal.
+*/
+@theme {
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-rio-50: #eef5f2;
+  --color-rio-100: #d3e6de;
+  --color-rio-300: #7fada0;
+  --color-rio-500: #1a6b54;
+  --color-rio-600: #0e4b3d;
+  --color-rio-700: #093a2f;
+  --color-rio-900: #052018;
+
+  --color-arena-50: #fbfaf6;
+  --color-arena-100: #f6f4ee;
+  --color-arena-200: #ece7da;
+
+  --color-oro-100: #f3e3c2;
+  --color-oro-300: #d9ad5c;
+  --color-oro-500: #b7862c;
+  --color-oro-600: #966a1e;
+
+  --color-alerta-100: #f6dcd6;
+  --color-alerta-300: #e08872;
+  --color-alerta-500: #c1432e;
+  --color-alerta-600: #9c3423;
+
+  --color-tinta-500: #1c2521;
+  --color-tinta-700: #101512;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-arena-100);
+  color: var(--color-tinta-500);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
